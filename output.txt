@@ -1,0 +1,219 @@
+SAK-12501 merge to 2-5-x: r39622, r39624:5, r39632:3 (resolve conflict from differing linebreaks for r39622)
+
+----------------------
+************************************************************************************************************
+BSP-1415 New (Guest) user Notification
+
+----------------------
+************************************************************************************************************
+merge fix to SAK-9996 into 2-5-x branch: svn merge -r 39687:39688 https://source.sakaiproject.org/svn/site-manage/trunk/
+
+----------------------
+************************************************************************************************************
+SAK-12180 - Fixed errors with grading helper
+
+----------------------
+************************************************************************************************************
+merge fix to SAK-10788 into site-manage 2.4.x branch:
+
+Sakai Source Repository  	#38024  	Wed Nov 07 14:54:46 MST 2007  	zqian@umich.edu  	 Fix to SAK-10788: If a provided id in a couse site is fake or doesn't provide any user information, Site Info appears to be like project site with empty participant list
+
+Watch for enrollments object being null and concatenate provider ids when there are more than one.
+Files Changed
+MODIFY /site-manage/trunk/site-manage-tool/tool/src/java/org/sakaiproject/site/tool/SiteAction.java 
+
+
+
+
+----------------------
+************************************************************************************************************
+SAK-12180 - New helper tool to grade an assignment
+
+----------------------
+************************************************************************************************************
+unmerge Xingtang's checkin for SAK-12488.
+
+svn merge -r39558:39557 https://source.sakaiproject.org/svn/msgcntr/trunk
+U    messageforums-app/src/java/org/sakaiproject/tool/messageforums/PrivateMessagesTool.java
+U    messageforums-app/src/java/org/sakaiproject/tool/messageforums/ui/PrivateMessageDecoratedBean.java
+
+svn log -r 39558
+------------------------------------------------------------------------
+r39558 | hu2@iupui.edu | 2007-12-20 15:25:38 -0500 (Thu, 20 Dec 2007) | 3 lines
+
+SAK-12488
+when send a message to yourself. click reply to all, cc row should be null.
+http://jira.sakaiproject.org/jira/browse/SAK-12488
+------------------------------------------------------------------------
+
+
+----------------------
+************************************************************************************************************
+unmerge Xingtang's check in for SAK-12484.
+
+svn merge -r39571:39570 https://source.sakaiproject.org/svn/msgcntr/trunk
+U    messageforums-api/src/bundle/org/sakaiproject/api/app/messagecenter/bundle/Messages.properties
+U    messageforums-app/src/java/org/sakaiproject/tool/messageforums/PrivateMessagesTool.java
+
+svn log -r 39571
+------------------------------------------------------------------------
+r39571 | hu2@iupui.edu | 2007-12-20 21:26:28 -0500 (Thu, 20 Dec 2007) | 3 lines
+
+SAK-12484
+reply all cc list should not include the current user name.
+http://jira.sakaiproject.org/jira/browse/SAK-12484
+------------------------------------------------------------------------
+
+
+----------------------
+************************************************************************************************************
+SAK-12596
+http://bugs.sakaiproject.org/jira/browse/SAK-12596
+- left moot (unused) entries commented for now
+
+----------------------
+************************************************************************************************************
+SAK-12595
+http://bugs.sakaiproject.org/jira/browse/SAK-12595
+- left moot (unused) entries commented for now
+
+----------------------
+************************************************************************************************************
+fix to SAK-10911: Refactor use of site.upd, site.upd.site.mbrship and site.upd.grp.mbrship permissions
+
+----------------------
+************************************************************************************************************
+SAK-12592
+http://bugs.sakaiproject.org/jira/browse/SAK-12592
+- left moot (unused) entries commented for now
+
+----------------------
+************************************************************************************************************
+SAK-12175
+http://bugs.sakaiproject.org/jira/browse/SAK-12175
+Create methods required for gb integration with the Assignment2 tool
+getGradeDefinitionForStudentForItem
+
+----------------------
+************************************************************************************************************
+fix to SAK-12604:Don't show groups/sections filter if the site doesn't have any
+
+----------------------
+************************************************************************************************************
+Temporary commit of incomplete work on JAR caching
+
+----------------------
+************************************************************************************************************
+SAK-12065 Gopal - Samigo Group Release. SubmissionStatus/TotalScores/Questions View filter.
+
+----------------------
+************************************************************************************************************
+svn log -r39753 https://source.sakaiproject.org/svn/polls/trunk
+------------------------------------------------------------------------
+r39753 | david.horwitz@uct.ac.za | 2008-01-04 13:05:51 +0200 (Fri, 04 Jan 2008) | 1 line
+
+SAK-12228 implmented workaround sugested by AB - needs to be tested against a trunk build
+------------------------------------------------------------------------
+dhorwitz@david-horwitz-6:~/branchManagemnt/sakai_2-5-x> svn merge -c39753 https://source.sakaiproject.org/svn/polls/trunk polls/
+U    polls/.classpath
+A    polls/tool/src/java/org/sakaiproject/poll/tool/evolvers
+A    polls/tool/src/java/org/sakaiproject/poll/tool/evolvers/SakaiFCKTextEvolver.java
+C    polls/tool/src/webapp/WEB-INF/requestContext.xml
+U    polls/tool/pom.xml
+
+dhorwitz@david-horwitz-6:~/branchManagemnt/sakai_2-5-x> svn resolved polls/tool/src/webapp/WEB-INF/requestContext.xml
+Resolved conflicted state of 'polls/tool/src/webapp/WEB-INF/requestContext.xml
+
+
+----------------------
+************************************************************************************************************
+SAK-12228 implmented workaround sugested by AB - needs to be tested against a trunk build
+
+----------------------
+************************************************************************************************************
+svn log -r39641 https://source.sakaiproject.org/svn/podcasts/trunk
+------------------------------------------------------------------------
+r39641 | josrodri@iupui.edu | 2007-12-28 23:44:24 +0200 (Fri, 28 Dec 2007) | 1 line
+
+SAK-9882: refactored podMain.jsp the right way (at least much closer to)
+------------------------------------------------------------------------
+
+dhorwitz@david-horwitz-6:~/branchManagemnt/sakai_2-5-x> svn merge  -c39641 https://source.sakaiproject.org/svn/podcasts/trunk podcasts/
+C    podcasts/podcasts-app/src/webapp/podcasts/podMain.jsp
+U    podcasts/podcasts-app/src/webapp/css/podcaster.css
+
+conflict merged manualy
+
+
+
+----------------------
+************************************************************************************************************
+svn log -r39146 https://source.sakaiproject.org/svn/podcasts/trunk
+------------------------------------------------------------------------
+r39146 | josrodri@iupui.edu | 2007-12-12 21:40:33 +0200 (Wed, 12 Dec 2007) | 1 line
+
+SAK-9882: refactored the other pages as well to take advantage of proper jsp components as well as validation cleanup.
+------------------------------------------------------------------------
+dhorwitz@david-horwitz-6:~/branchManagemnt/sakai_2-5-x> svn merge -c39146 https://source.sakaiproject.org/svn/podcasts/trunk podcasts/
+D    podcasts/podcasts-app/src/webapp/podcasts/podPermissions.jsp
+U    podcasts/podcasts-app/src/webapp/podcasts/podDelete.jsp
+U    podcasts/podcasts-app/src/webapp/podcasts/podMain.jsp
+U    podcasts/podcasts-app/src/webapp/podcasts/podNoResource.jsp
+U    podcasts/podcasts-app/src/webapp/podcasts/podOptions.jsp
+D    podcasts/podcasts-app/src/webapp/images/rss-feed-icon.png
+U    podcasts/podcasts-app/src/webapp/css/podcaster.css
+
+
+
+----------------------
+************************************************************************************************************
+SAK-6216 merge event change from SAK-11169 (r39033) to synchronize branch with 2-5-x (for convenience for UCT local build)
+
+----------------------
+************************************************************************************************************
+BSP-1420 Update text to clarify "Re-Use Materials..." option in WS Setup
+
+----------------------
+************************************************************************************************************
+BSP-1421 Add text to clarify "Duplicate Site" option in Site Info
+
+----------------------
+************************************************************************************************************
+SAK-12602 Fix logic when a user has multiple roles in a section
+
+----------------------
+************************************************************************************************************
+update external for GB.
+
+----------------------
+************************************************************************************************************
+svn merge -c 39403 https://source.sakaiproject.org/svn/gradebook/trunk
+U    app/ui/src/java/org/sakaiproject/tool/gradebook/ui/RosterBean.java
+
+svn log -r 39403 https://source.sakaiproject.org/svn/gradebook/trunk
+------------------------------------------------------------------------
+r39403 | wagnermr@iupui.edu | 2007-12-17 17:11:08 -0500 (Mon, 17 Dec 2007) | 3 lines
+
+SAK-12504
+http://jira.sakaiproject.org/jira/browse/SAK-12504
+Viewing "All Grades" page as a TA with grader permissions causes stack trace
+------------------------------------------------------------------------
+
+
+----------------------
+************************************************************************************************************
+svn merge -c 35014 https://source.sakaiproject.org/svn/gradebook/trunk
+U    app/ui/src/java/org/sakaiproject/tool/gradebook/ui/RosterBean.java
+
+svn log -r 35014 https://source.sakaiproject.org/svn/gradebook/trunk
+------------------------------------------------------------------------
+r35014 | wagnermr@iupui.edu | 2007-09-12 16:17:59 -0400 (Wed, 12 Sep 2007) | 3 lines
+
+SAK-11458
+http://bugs.sakaiproject.org/jira/browse/SAK-11458
+Course grade does not appear on "All Grades" page if no categories in gb
+------------------------------------------------------------------------
+
+
+----------------------
+************************************************************************************************************
